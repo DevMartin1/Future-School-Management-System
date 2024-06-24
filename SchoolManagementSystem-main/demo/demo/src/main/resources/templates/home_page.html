@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homestyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg bg-light sticky-top  ">
+        <div class="container">
+            <a class="navbar-brand fs-3 font-weight-bolder" href="#">LearnersGuide</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto" >
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Support</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="btn btn-warning  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                                  <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"/>
+                               </svg>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                               <li><hr class="dropdown-divider"></li>
+                               <li><a class="dropdown-item" href="#">Another action</a></li>
+                               <li><hr class="dropdown-divider"></li>
+                               <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                         </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <i class="bi bi-three-dots-vertical"></i>
+                        </a>   
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown pb-4">
+                            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="user.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+
+                                <li><a class="dropdown-item" th:href="@{/logout}">Sign out</a></li>
+
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li>
+                        <a href="#home" class="nav-link" ><h5 th:text="${userDetail.getUser_name}"> RG SEAGA</h5></a>
+                    </li>
+                </ul>
+            </div>
+  
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="navbar navbar-extend-lg bg-dark">
+            <div class="container">
+
+                <h5 class="text-warning">Learner portal</h5>
+
+            </div>
+
+        </div>
+        <h3 class="Dashboardn my-3">Dashboard</h3>
+        <hr>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Parent!</strong> You should check the latest notifications to be updates.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+    </div> 
+            
+      <!--Grid layout for dashboard-->
+     
+            
+            <!----New dashboard-->
+    <div class="container my-5">
+        <div class="row row-cols-1 row-cols-md-2in.h g-5">
+        <div class="col-md-8">
+            <div class="row row-cols-1 row-cols-md-3 gx-4 gy-4">
+                <div class="col">
+                    <div class="card shadow rounded-1 h-100" >
+                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-top rounded-1" alt="Hollywood Sign on The Hill"/>
+                        <div class="card-body">
+                            <div class="card-img-overlay d-flex ">
+                                
+                                <h5 class="card-title text-white" >Card title</h5>   
+                                
+                            </div>
+                            
+                                <a th:href="@{/calender}" class="text-warning">
+            
+                                    <h5 class="card-title text-warning font-weight-bolder">Upcoming</h5>
+                                  </a>  
+                              <h6 class="card-text text-secondary ">
+                                <i class="bi bi-dot"></i>deadlines, exams, and events.
+                              </h6>
+                              <i class="bi bi-calendar-date text-secondary font-weight-bolder"></i>     
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                    <div class="card shadow rounded-1 h-100" >
+                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="card-img-top rounded-1" alt="Palm Springs Road"/>
+                        <div class="card-body">
+                            <a th:href="@{/myclass}" class="text-primary">
+        
+                                <h5 class="card-title font-weight-bolder">My Subjects</h5>
+                              </a>  
+                          <h6 class="card-text text-secondary ">
+                            <i class="bi bi-dot"></i> Teachers, subjects
+                          </h6>
+                          <i class="bi bi-book text-secondary font-weight-bolder"></i></i>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                    <div class="card shadow rounded-1 h-100" >
+                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top rounded-1" alt="Los Angeles Skyscrapers"/>
+                        <div class="card-body">
+                            <a th:href="@{/extra_curri}" class="text-success">
+        
+                                <h5 class="card-title text-success font-weight-bolder">Extracurricular Acti..</h5>
+                              </a>  
+                          <h6 class="card-text text-secondary ">
+                            <i class="bi bi-dot"></i> clubs, sports teams, and events.
+                          </h6>
+                          <i class="bi bi-graph-up text-secondary font-weight-bolder"></i>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                    <div class="card shadow rounded-1 h-100" >
+                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top rounded-1" alt="Skyscrapers"/>
+                        <div class="card-body">
+                            <a href="#" class="text-dark">
+                                <h5 class="card-title text-dark font-weight-bolder">Contacts</h5>
+                              </a>  
+                          <h6 class="card-text text-secondary ">
+                            <i class="bi bi-dot"></i>Link to the school.
+                          </h6>
+
+                          <i class="bi bi-calendar4-week text-secondary font-weight-bolder"></i>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                    <div class="card shadow rounded-1 h-100" >
+                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top rounded-1" alt="Skyscrapers"/>
+                        <div class="card-body">
+                            <a th:href="@{/mark_page}" class="text-warning">
+        
+                                <h5 class="card-title text-warning font-weight-bolder">Grades and Progress</h5>
+                              </a>  
+                          <h6 class="card-text text-secondary ">
+                            <i class="bi bi-dot"></i> view grades, progress reports
+                          </h6>
+                          <i class="bi bi-graph-up text-secondary font-weight-bolder"></i>
+                        </div>
+                      </div>
+                  </div>
+                  
+                </div>
+            </div>
+            <div class="col-md-4" >
+                <a th:href="@{/announcements}" class="text-dark">
+                    <div class="card shadow rounded-2 w-80">
+                        <div class="containter-fluid">
+                            <div class="card-body d-flex justify-content-around">
+                                <h5 class="card-title ">Announcements</h5>
+                                
+                                <i class="bi bi-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!---Student Support Services section -->
+    <!---Student Support Services section -->
+    <div class="container my-5 p-4">
+        <h1 class=" my-3"><i class="bi bi-question-circle-fill mx-3" ></i>Student Support Services</h1>
+        <hr>
+        <div class="col-md-12 mt-4 mx-auto" >
+
+            <div class="card shadow rounded-2 w-100 p-4">
+                <div class="containter-fluid">
+                    <div class="card-body d-flex justify-content-between">
+
+                        <div>
+                            <h4><i class="bi bi-arrow-right"></i>  Addressing Learner Bullying and School Contact Information</h4>
+                            <br>
+                            <p>
+
+
+                                Ensuring the safety and well-being f our students is a top priority at <strong>LearnersGuid</strong> learnrsGuide. It has come to our attention that instances of learner bullying have been reported, and we want to address this issue promptly and effectively.<br><br>
+
+                                Bullying in any form is unacceptable and goes against the values of our school community. We are committed to creating a safe and inclusive environment where all learners feel respected, valued, and supported. It is crucial for us to work together to address and prevent bullying behavior.
+
+                                <br><br> If your child is experiencing bullying or if you have any concerns related to bullying incidents, please do not hesitate to reach out to us. Here's how you can get in contact with the school.
+                                <br><br>
+                                For more awareness on bullying please visit this site <a href="StopBullying.gov">StopBullying.gov</a>
+
+                            </p>
+                            <h5>Click <a th:href="@{/contacts}">Here</a> to get  the school contacts.</h5>
+
+                        </div>
+                        <img src="no_bullyin.jpg" height="500px" width="500px" class="img-fluid rounded" alt="">
+                        <div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!---Helpdesk or FAQ section-->
+    <div class="container my-5">
+        <h3 class=" my-3">Helpdesk or FAQ</h3>
+        <hr>
+        <h1><i class="bi bi-question-circle-fill mx-3" ></i>Accessing Subjects Info</h1>
+    </div>
+    
+    <div class="container d-flex justify-content-around align-items-center">
+        <div class="accordion w-100" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header bg-warning" id="headingOne">
+                <button class="accordion-button bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <strong>How do I view my subjects on the portal?</strong>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    To access your subjects, On this page the portal navigate to the "Dashboard" section. Then click the card to view subjects.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <strong>How get in touch with the teacher?</strong>
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>You would like to talk to the subject teachers<i class="bi bi-chat-dots-fill"></i>. </strong>No worry, Navigate to the <a href="#Dashboardn">"Dashboard"</a>  which is locate up on this page click on the card which is written "Class schedule" then you will be sent to the page where you will get the contacts of the lecture for respective subjects at the bottom of the page.<i class="bi bi-emoji-smile"></i>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed bg-warning  font-weight-bolder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <strong>How to view term marks?</strong>
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body ">
+                  <strong>Your child is hidding term marks<i class="bi bi-hand-thumbs-down-fill"></i>.</strong> Dont worry, Navigate to the <a href="#Dashboardn">"Dashboard"</a>  which is locate up on this page click on the card which is written "Grades and progress" then you will be sent to the page where you will get the tables which a with the respective term number. <i class="bi bi-emoji-smile"></i>
+                </div>
+              </div>
+            </div>
+        </div>
+
+            <img src="undraw_Faq.png" class="img-fluid w-50"  alt="">
+
+    </div>
+        
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

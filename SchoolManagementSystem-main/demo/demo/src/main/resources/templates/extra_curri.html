@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.w3.org/1999/xhtml"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleextra.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="plugins/video-js/video-js.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="styles/about.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="supuer-container">
+        <header class="header">
+			
+            <!-- Top Bar -->
+            <div class="top_bar">
+                <div class="top_bar_container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
+                                    <ul class="top_bar_contact_list">
+                                        <li><div class="question">Have any questions?</div></li>
+                                        <li>
+                                            <div>0685524703</div>
+                                        </li>
+                                        <li>
+                                            <div>info@learnersguide.com</div>
+                                        </li>
+                                    </ul>
+                                    <div class="top_bar_login ml-auto">
+                                        <ul>
+                                            <li><a href="#">Logout</a></li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>				
+            </div>
+          
+            <!-- Header Content -->
+            <div class="header_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                                <div class="logo_container">
+                                    <a href="#">
+                                        <div class="logo_content d-flex flex-row align-items-end justify-content-start">
+                                            <a class="navbar-brand fs-3 font-weight-bolder">LearnersGuide <img clase="img-fluid" style="width: 40px;margin-bottom: 10px;" src="learner.png" alt=""></a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <nav class="main_nav_contaner ml-auto">
+                                    <ul class="main_nav">
+                                        <li><a th:href="@{/home_page}">home</a></li>
+                                        <li ><a th:href="@{/announcements}">Announcements</a></li>
+                                        <li><a th:href="@{/mark_page}">Marks</a></li>
+                                        <li class="active"><a th:href="@{/extra_curri}">Extracurricular</a></li>
+                                        <li><a th:href="@{/myclass}">my subjects</a></li>
+                                        <li><a th:href="@{/contacts}">contact</a></li>
+                                    </ul>
+                                    
+                                    <!-- Hamburger -->
+          
+                                    <div class="hamburger menu_mm">
+                                        <i class="fa fa-bars menu_mm" aria-hidden="true"></i>
+                                    </div>
+                                </nav>
+          
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </header>
+          <div class="home">
+            <!-- Background image artist https://unsplash.com/@thepootphotographer -->
+            <div class="home_background parallax_background parallax-window" data-parallax="scroll" data-image-src="images/about.jpg" data-speed="0.8"></div>
+            <div class="home_container">
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <div class="home_content text-center">
+                      <div class="home_title">Extracurricular Activities</div>
+                      <div class="breadcrumbs">
+                        <ul>
+                          <li><a href="index.html">Home</a></li>
+                          <li>Extracurricular</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!------Content-->
+        
+<div class="intro container flex-md-row justify-content-between align-items-center p-5 my-5">
+    <div class="row">
+        <div class="col-md-7 text-center">
+            <h1>Welcome to our extracurricular activities!</h1>
+            <p>Here, you'll find opportunities for your child to explore interests, develop skills, and make new friends outside of the classroom. From sports teams and clubs to arts programs and community service, there's something for everyone. Learn how to get involved, view upcoming events, and hear success stories from students just like yours. Have questions? Reach out to us—we're here to help.</p>
+        </div>
+       <div class="col-md-5">
+            <img src="undraw_Children_re_c37f.png" class="img-fluid" alt="">
+       </div>
+    </div>
+</div>
+<div class="section-title text-center">
+    <h1>Our activities</h1>
+</div>
+
+<div class="container my-5 ">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-xl-3">
+            <div class="card bg-c-blue order-card border-0">
+                <div class="card-block">
+                    <h6 class="m-b-20">Sports</h6>
+                    <h2 class="text-center"><img src="soccer_player.png" class="img-fluid" alt=""></h2>
+                    <p class="m-b-0">Learners involved<span class="f-right">351</span></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-sm-6 col-md-4 col-xl-3">
+            <div class="card bg-c-green order-card  border-0">
+                <div class="card-block">
+                    <h6 class="m-b-20">Academic Competitions</h6>
+                    <h2 class="text-center"><img src="bookacademic.png" class="img-fluid" alt=""></h2>
+                    <p class="m-b-0">Learners involved<span class="f-right">351</span></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-sm-6 col-md-4 col-xl-3">
+            <div class="card bg-c-yellow order-card  border-0">
+                <div class="card-block">
+                    <h6 class="m-b-20">Clubs and Organizations</h6>
+                    <h2 class="text-center"><img src="chess.png" class="img-fluid" alt=""></h2>
+                    <p class="m-b-0">Learners involved<span class="f-right">351</span></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-sm-6 col-md-4 col-xl-3">
+            <div class="card bg-c-pink order-card  border-0">
+                <div class="card-block">
+                    <h6 class="m-b-20">Athletics</h6>
+                    <h2 class="text-center"><img src="paint.png" class="img-fluid" alt=""></h2>
+                    <p class="m-b-0">Learners involved<span class="f-right">351</span></p>
+                </div>
+            </div>
+        </div>         
+    </div>
+</div>
+<div class="section-title  text-center my-2">
+    <h1>How to Get Involved or in Contact</h1>
+    
+    <div class=" mx-auto " style="width: 50rem;">
+        
+        <div class="container d-md-flex justify-content-center align-items-center py-5 min-vh-100">
+
+            <div class="row row-cols-1 row-cols-md-3 gx-5 border rounded-1 py-5 shadow">
+    
+                <div class="col col-md-6 d-flex justify-content-center align-items-center flex-direction-column rounded-1 "  >
+                    <img src="discussion.png" style="width: 400px;" class="img-fluid p-5">
+                </div>
+    
+                <div class="col col-md-6" >
+                    <div class="header-text mb-3 ">
+                        <h4 class="my-2 ">Get in touch with our <br>Sport director</h4>
+                        
+                    </div>
+                    <div th:if="${param.success}">
+                        <div class="alert alert-info">
+                            Complain or query submitted.
+                        </div>
+                    </div>
+                    <form th:action="@{/extra_curri}" method="POST" th:object="${schoolMsgDto}">
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Curricular Code </label>
+                          <input type="text" placeholder="e.g Chess" th:field="*{query_code}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1">Description / Complain</label>
+                            <textarea class="form-control p-4" th:field="*{dscription}"  placeholder="e.g My son/daughter is interested in getting involved in joining the rugby team." id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn  w-100 my-2 shadow text-light" style="background-color: #ff8c00;">Submit</button>
+                      </form>
+
+                </div>
+    
+            </div>
+    
+        </div>
+
+        
+    </div>
+</div>  
+
+
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="styles/bootstrap4/popper.js"></script>
+    <script src="styles/bootstrap4/bootstrap.min.js"></script>
+    <script src="plugins/greensock/TweenMax.min.js"></script>
+    <script src="plugins/greensock/TimelineMax.min.js"></script>
+    <script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+    <script src="plugins/greensock/animation.gsap.min.js"></script>
+    <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+    <script src="plugins/easing/easing.js"></script>
+    <script src="plugins/parallax-js-master/parallax.min.js"></script>
+    <script src="js/about.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

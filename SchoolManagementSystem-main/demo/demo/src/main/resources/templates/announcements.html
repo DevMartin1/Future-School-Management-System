@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.w3.org/1999/xhtml"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="plugins/video-js/video-js.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="styles/about.css">
+    <link rel="stylesheet" type="text/css" href="styles/about_responsive.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div class="super_container">
+
+        <header class="header">
+			
+            <!-- Top Bar -->
+            <div class="top_bar">
+                <div class="top_bar_container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
+                                    <ul class="top_bar_contact_list">
+                                        <li><div class="question">Have any questions?</div></li>
+                                        <li>
+                                            <div>0685524703</div>
+                                        </li>
+                                        <li>
+                                            <div>info@learnersguide.com</div>
+                                        </li>
+                                    </ul>
+                                    <div class="top_bar_login ml-auto">
+                                        <ul>
+                                            <li><a href="#">Logout</a></li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>				
+            </div>
+    
+            <!-- Header Content -->
+            <div class="header_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                                <div class="logo_container">
+                                    <a href="#">
+                                        <div class="logo_content d-flex flex-row align-items-end justify-content-start">
+                                            <a class="navbar-brand fs-3 font-weight-bolder">LearnersGuide <img clase="img-fluid" style="width: 40px;margin-bottom: 10px;" src="learner.png" alt=""></a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <nav class="main_nav_contaner ml-auto">
+                                    <ul class="main_nav">
+                                        <li><a th:href="@{/home_page}">home</a></li>
+                                        <li class="active"><a th:href="@{/announcements}">Announcements</a></li>
+                                        <li ><a th:href="@{/mark_page}">Marks</a></li>
+                                        <li ><a th:href="@{/extra_curri}">Extracurricular</a></li>
+                                        <li><a th:href="@{/myclass}">my subjects</a></li>
+                                        <li><a th:href="@{/contacts}">contact</a></li>
+                                    </ul>
+                                    
+                                    <!-- Hamburger -->
+    
+                                    <div class="hamburger menu_mm">
+                                        <i class="fa fa-bars menu_mm" aria-hidden="true"></i>
+                                    </div>
+                                </nav>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Header Search Panel -->
+            <div class="header_search_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="header_search_content d-flex flex-row align-items-center justify-content-end">
+                                <form action="#" class="header_search_form">
+                                    <input type="search" class="search_input" placeholder="Search" required="required">
+                                    <button class="header_search_button d-flex flex-column align-items-center justify-content-center">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>			
+            </div>			
+        </header>
+        <!-- Home -->
+
+	<div class="home">
+		<!-- Background image artist https://unsplash.com/@thepootphotographer -->
+		<div class="home_background parallax_background parallax-window" data-parallax="scroll" data-image-src="images/about.jpg" data-speed="0.8"></div>
+		<div class="home_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="home_content text-center">
+							<div class="home_title">Announcements</div>
+							<div class="breadcrumbs">
+								<ul>
+									<li><a href="index.html">Home</a></li>
+									<li>Announcements</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+        
+<div class="container py-5">
+    
+       
+    
+    
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            
+            <!-- Timeline -->
+            <ul class="timeline">
+                <h1>Timeline</h1>
+                <th:block th:each=" message : ${messages}">
+                    <tr>
+                        <li class="timeline-item bg-white rounded mb-5 p-4 shadow">
+                            <div class="timeline-arrow"></div>
+
+
+                            <h1 class="h2 mb-0" th:text="${message.title}">Title of section 1</h1 >
+                            <h3>
+                                <span><i class="fa fa-clock-o mr-1"></i></span>
+                                <small th:text="${message.creation_date}"></small>
+                                <small class="text-small">Posted By</small>
+                                <small th:text="${message.posted_by}"></small>
+                            </h3>
+                            <br>
+                            <h3>
+                                <span><i class="bi bi-arrow-right"></i></span>
+                                <small class="text-big mt-2 " th:text="${message.description}"></small>
+                            </h3>
+
+                        </li>
+                    </tr>
+
+                </th:block>
+            </ul><!-- End -->
+
+        </div>
+    </div>
+</div>
+</div>
+
+    
+    
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="styles/bootstrap4/popper.js"></script>
+  <script src="styles/bootstrap4/bootstrap.min.js"></script>
+  <script src="plugins/greensock/TweenMax.min.js"></script>
+  <script src="plugins/greensock/TimelineMax.min.js"></script>
+  <script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+  <script src="plugins/greensock/animation.gsap.min.js"></script>
+  <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+  <script src="plugins/easing/easing.js"></script>
+  <script src="plugins/parallax-js-master/parallax.min.js"></script>
+  <script src="js/about.js"></script>
+</body>
+</html>
