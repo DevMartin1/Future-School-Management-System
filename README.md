@@ -47,5 +47,4 @@ Conclusion:
 
 The proposed web application aims to revolutionize the way parents, students, teachers, and administrators interact and collaborate within the school community. By leveraging technology to enhance parental engagement, monitor student progress, ensure safety measures, and streamline administrative processes, the application will contribute to the overall academic success and well-being of students. We look forward to partnering with the local primary school to bring this vision to life and create a more connected and thriving educational ecosystem.
 
-If you'd like to delve deeper into any aspect of this project, feel free to let me know!
 ![Screenshot (245)](https://github.com/DevMartin1/Future-School-Management-System/assets/172501279/0c6b5e0a-a32c-4157-b02c-b0f2806351ae)
